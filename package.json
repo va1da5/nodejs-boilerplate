@@ -7,9 +7,11 @@
   "scripts": {
     "build": "babel src --out-dir dist",
     "dev": "nodemon --exec babel-node -r dotenv/config src/index.js",
-    "restart": "rimraf dist && npm run build && npm run start",
+    "clean": "rimraf dist",
+    "restart": "npm run clean && npm run build && npm run start",
     "start": "node -r dotenv/config dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage",
+    "lint": "eslint src"
   },
   "author": "",
   "license": "MIT",
@@ -26,6 +28,7 @@
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^25.1.0",
+    "babel-plugin-rewire": "^1.2.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-config-standard": "^14.1.0",

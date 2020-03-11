@@ -3,7 +3,7 @@ FROM node:12.16.0-alpine3.9
 # Set a working directory
 WORKDIR /usr/src/app
 
-COPY /package.json .
+COPY package.json .
 
 # Install Node.js dependencies
 RUN npm install --production --no-progress

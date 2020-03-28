@@ -1,0 +1,13 @@
+node_modules
+coverage
+src
+nodemon.json
+.vscode
+.editorconfig
+.env.sample
+.git
+.gitattributes
+.gitignore
+.huskyrc
+.dockerignore
+.prettierrc

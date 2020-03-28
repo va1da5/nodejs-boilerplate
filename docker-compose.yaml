@@ -1,0 +1,15 @@
+# https://docs.docker.com/compose/compose-file/
+version: '3.7'
+services:
+  service:
+    image: $npm_package_name
+    container_name: $npm_package_name
+    ports:
+      - '3000:3000'
+    networks:
+      - overlay
+    env_file: .env
+    restart: always
+
+networks:
+  overlay:

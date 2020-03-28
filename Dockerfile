@@ -9,7 +9,7 @@ COPY package.json .
 RUN npm install --production --no-progress
 
 # Copy application files
-COPY ./dist/ .
+COPY . .
 
 # Set permissions for "node" user
 RUN chown -R node:node /usr/src/app
@@ -21,4 +21,4 @@ USER node
 # Set NODE_ENV env variable to "production" for faster expressjs
 ENV NODE_ENV production
 
-CMD [ "node", "index.js" ]
+CMD [ "node", "dist/index.js" ]

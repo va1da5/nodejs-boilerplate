@@ -14,7 +14,7 @@
     "prettier/standard",
     "plugin:jest/recommended"
   ],
-  "plugins": ["prettier", "jest"],
+  "plugins": ["standard", "prettier", "jest"],
   "rules": {
     "promise/catch-or-return": "error",
     "prettier/prettier": "error",

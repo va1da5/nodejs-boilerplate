@@ -18,7 +18,10 @@
   "rules": {
     "promise/catch-or-return": "error",
     "prettier/prettier": "error",
-    "no-console": 1
+    "no-console": "warn",
+    "sort-keys": "off",
+    "capitalized-comments": "off",
+    "multiline-comment-style": "off"
   },
   "ignorePatterns": ["jest.config.js", "node_modules/", "dist/"]
 }
